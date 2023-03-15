@@ -1,5 +1,156 @@
 $(window).on("load", function () {
-    $('#preloader').fadeOut(500)
+    $('#preloader').fadeOut(100)
     $('body').css("opacity", 1)
 
 });
+
+
+$(document).ready(function () {
+    if ($(window).width() < 1366) {
+        $('.team__slick-slider').slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            adaptiveHeight: true,
+            slidesToShow: 1,
+            lazyLoad: 'ondemand',
+            cssEase: 'linear',
+        })
+    }
+
+
+    $('.js--more-link').on('click', function (e) {
+        e.preventDefault()
+
+        var $attr = $(this).data('more'),
+            $content = $('.js--more-content[data-more=' + $attr + ']')
+        $content.slideToggle()
+
+    })
+
+
+    function nav() {
+        var $nav = $('.nav')
+
+        $('.burger').on('click', function () {
+            $nav.addClass('open')
+        })
+
+        $('.nav__close-btn').on('click', function () {
+            $nav.removeClass('open')
+        })
+    }
+
+
+    function teamCards() {
+        var $cards = $('.team__card')
+
+
+        function closeCards() {
+            $cards.removeClass('card--hide')
+            $cards.removeClass('card--current')
+        }
+
+        $cards.each(function () {
+            var
+                $card = $(this),
+                $buttonOpen = $card.find('.card__more'),
+                $buttonClose = $card.find('.card__close'),
+                $index = $(this).index()
+
+
+            $buttonOpen.on('click', function (e) {
+                e.preventDefault()
+                closeCards()
+
+                $card.addClass('card--current')
+
+                if ($index == 2) {
+                    $cards.eq(0).addClass('card--hide')
+                } else {
+                    $cards.eq(2).addClass('card--hide')
+                }
+
+            })
+
+
+            $buttonClose.on('click', function (e) {
+                e.preventDefault()
+                closeCards()
+            })
+
+
+        })
+
+
+    }
+
+    function resumeForm() {
+        var $form = $('.js--resume__form'),
+            $submitButton = $form.find('.resume__submit-btn'),
+
+            $text = $form.find('input[type="text"]'),
+            $file = $form.find('input[type="file"]'),
+            $checkbox = $form.find('input[type="checkbox"]')
+
+
+        function filesLabel() {
+            var
+                $file = $form.find('.resume__file'),
+                $button = $file.find('.resume__fields-btn'),
+                $fileInput = $file.find('.file__input'),
+                $buttonsText = $button.find('span'),
+                $newText = $fileInput[0].files[0].name
+
+
+            $buttonsText.text($newText)
+
+
+        }
+
+
+        function validation() {
+            $text.each(function () {
+                if ($(this).val().length == 0) {
+                    return false
+                }
+            })
+
+            if (!$checkbox.prop('checked')) {
+                return false
+            }
+
+            if ($file[0].files.length == 0) {
+                return false
+            }
+
+
+            $submitButton.removeClass('btn--disabled')
+
+        }
+
+
+        $text.on('focusout', function () {
+            validation()
+        })
+
+        $file.on('change', function () {
+            filesLabel()
+            validation()
+        })
+
+        $checkbox.on('change', function () {
+            validation()
+        })
+
+
+    }
+
+
+    nav()
+    teamCards()
+    resumeForm()
+
+
+})
+

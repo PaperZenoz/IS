@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
  <title>Главная</title>
 
-
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
  <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
 
@@ -44,11 +44,40 @@
 
     </a>
     <nav class="nav">
-     <a href="#" class="link">Компания</a>
-     <a href="#" class="link">Продукт</a>
-     <a href="#" class="link">Команда</a>
-     <a href="#" class="link">Вакансии</a>
+     <div class="nav__bg"></div>
+     <a href="#" class="nav__close-btn">
+      <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <g filter="url(#filter0_d_2432_17845)">
+        <rect x="6.09516" y="17.5312" width="21.799" height="3.70172" rx="1.85086" transform="rotate(-45 6.09516 17.5312)" fill="white" stroke="#E4668C" stroke-width="1.23391" />
+        <rect x="8.47266" y="2.14008" width="21.799" height="3.70172" rx="1.85086" transform="rotate(45 8.47266 2.14008)" fill="white" stroke="#E4668C" stroke-width="1.23391" />
+        <rect x="12.3555" y="12.1504" width="4.95668" height="2.46414" transform="rotate(-45 12.3555 12.1504)" fill="white" />
+       </g>
+       <defs>
+        <filter id="filter0_d_2432_17845" x="-4" y="0" width="38" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+         <feFlood flood-opacity="0" result="BackgroundImageFix" />
+         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+         <feOffset dy="4" />
+         <feGaussianBlur stdDeviation="2" />
+         <feComposite in2="hardAlpha" operator="out" />
+         <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+         <feBlend mode="normal" in2="BackgroundmageFix" result="effect1_dropShadow_2432_17845" />
+         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2432_17845" result="shape" />
+        </filter>
+       </defs>
+      </svg>
+
+     </a>
+     <a href="#" class="nav__link link">Компания</a>
+     <a href="#" class="nav__link link">Продукт</a>
+     <a href="#" class="nav__link link">Команда</a>
+     <a href="#" class="nav__link link">Вакансии</a>
     </nav>
+    <div class="burger active">
+     <span></span>
+     <span></span>
+     <span></span>
+    </div>
+
    </div>
 
   </div>
@@ -66,20 +95,24 @@
   <div class="banner section">
    <div class="container">
     <div class="banner__wrap">
-     <img class="banner__bg" src="images/banner/bg.png" alt="" />
-     <div class="banner__supertitle">
-      Технологическая компания
+     <div class="banner__bg"></div>
+     <div class="banner__content">
+      <div class="banner__supertitle">
+       Технологическая компания
+      </div>
+      <div class="banner__title">
+       Interactive Standard
+      </div>
+      <div class="banner__subtitle">
+       Разрабатываем уникальные
+       продукты
+      </div>
+      <a href="#" class="btn">
+       О TAPYOU
+      </a>
+
      </div>
-     <div class="banner__title">
-      Interactive Standard
-     </div>
-     <div class="banner__subtitle">
-      Разрабатываем уникальные <br>
-      продукты
-     </div>
-     <a href="#" class="btn">
-      О TAPYOU
-     </a>
+
     </div>
    </div>
   </div>
@@ -118,8 +151,9 @@
    <div class="container">
     <div class="project__wrap">
      <div class="project__top">
-      <div class="project__left-content">
-       <img src="images/iPhone.png" alt="" />
+      <div class="project__iphone">
+       <img src="images/project/iPhone.png" class="project__iphone-descktop" alt="" />
+       <img src="images/project/iPhone-mobile.png" class="project__iphone-mobile" alt="" />
       </div>
       <div class="project__right-content">
        <h2 class="h2">О Проекте</h2>
@@ -131,7 +165,7 @@
        <br>
        <span>Наше приложение прямо во время съемки объединит кадры, снятые всеми участниками, в один увлекательныйфильм: о путешествиях, вечеринках и просто приятных событиях. Кроме того, TapYou автоматически умеетразбивать видео на сцены, сокращает их до 15 секунд и показывает только лучшие моменты.</span>
        <div class="project__more-link more-link">
-        <a href="#" class="more-link__ancor">Узнать больше</a>
+        <a href="#" class="more-link__ancor js--more-link" data-more="project">Узнать больше</a>
        </div>
        <div class="project__buttons">
         <a href="#" class="btn">
@@ -233,8 +267,10 @@
        </div>
       </div>
      </div>
-     <div class="project__bottom">
+     <div class="project__bottom js--more-content" data-more="project">
       <p><strong>С TapYou можно: </strong></p>
+      <br>
+      <br>
       <ul class="ul ul--white">
        <li>Автоматически добавлять музыку и анимации, подходящие к сценам фильма</li>
        <li>Использовать фото, стикеры, текстовые и аудиосообщения для кадров общего фильма</li>
@@ -257,9 +293,11 @@
      <br>
      <br>
 
-     <div class="team__grid">
+     <div class="team__list team__slick-slider">
 
-      <div class="team__item card">
+      <div class="team__item team__card card">
+
+
        <div class="card__body">
         <div class="card__photo">
          <img src="images/team/1.png" alt="" />
@@ -277,7 +315,8 @@
 
 
 
-         <p>Я Никита - тимлид команды Android-разработки. Тебе к нам, если умеешь находить
+         <p>Я Никита - тимлид команды Android-разработки. Тебе к нам, если умеешь
+          находить
           элегантные решения нетривиальных задач. А их у нас достаточно.</p>
 
          <p>Мы делаем непростое, но очень классное приложение, которое позволяет легко и
@@ -288,10 +327,11 @@
           результат
           и наслаждаемся процессом разработки. Присоединяйся.</p>
 
-
-
-
-
+         <p>
+          <span>
+           #Kotlin, #Dagger2, #Room, #rxjava2, #retrofit2, #centrifuge, #WebRTC, #MVP, #moxy, #cicerone, #Lottie, #exoplayer, #ffmpeg, #MediaCodec, #MediaMuxer
+          </span>
+         </p>
 
 
 
@@ -304,10 +344,22 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6182 13C20.0658 13 19.6181 13.4476 19.6181 13.9998C19.6181 14.552 20.0658 14.9997 20.6182 14.9997L24.0037 14.9997L24.0037 18.3841C24.0037 18.9362 24.4515 19.3839 25.0039 19.3839C25.5562 19.3839 26.004 18.9362 26.004 18.3841L26.004 13.9998C26.004 13.4476 25.5562 13 25.0039 13H20.6182ZM18.3858 26.0005C18.9382 26.0005 19.386 25.5529 19.386 25.0007C19.386 24.4485 18.9382 24.0008 18.3858 24.0008H15.0003L15.0003 20.6164C15.0003 20.0643 14.5525 19.6166 14.0002 19.6166C13.4478 19.6166 13 20.0643 13 20.6164V25.0007C13 25.5529 13.4478 26.0005 14.0002 26.0005H18.3858Z" fill="white" />
          </svg>
         </a>
+        <a href="#" class="card__close">
+         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="39" height="39" rx="19.5" fill="#282B2F" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7069 22.9083C16.3162 23.2989 15.6831 23.2989 15.2927 22.9083C14.9023 22.5178 14.9025 21.8846 15.2931 21.4941L17.6874 19.1006L15.2947 16.7071C14.9043 16.3166 14.9045 15.6834 15.2951 15.2929C15.6858 14.9024 16.3189 14.9024 16.7093 15.2929L19.0508 17.6351L21.3923 15.2929C21.7827 14.9024 22.4159 14.9024 22.8065 15.2929C23.1972 15.6834 23.1974 16.3166 22.807 16.7071L20.4143 19.1006L22.8085 21.4941C23.1992 21.8846 23.1994 22.5178 22.809 22.9083C22.4186 23.2989 21.7854 23.2989 21.3948 22.9083L19.0508 20.5651L16.7069 22.9083Z" fill="white" />
+         </svg>
+        </a>
+        <a href="#" class="card__ancor btn btn--pink">
+         Вакансии
+        </a>
+
        </div>
       </div>
 
-      <div class="team__item card">
+      <div class="team__item team__card card">
+
+
        <div class="card__body">
         <div class="card__photo">
          <img src="images/team/2.png" alt="" />
@@ -326,22 +378,18 @@
 
 
 
+         <p>Меня зовут Екатерина. В TapYou я тимлид отличной iOS-команды.</p>
 
+         <p>Наши задачи очень отличаются от типичных на рынке, и это проявляется во всем:
+          от
+          бизнес-логики до дизайна. Работы сделано уже очень много, но самое
+          интересное,
+          конечно, впереди.</p>
 
-         <p>Меня зовут Владислав, и я тимлид команды AI. Если computer vision, future
-          engineering, deepfake, recommendation system звучит для тебя, как песня, то в
-          нашей компании тебе точно будет чем заняться.</p>
-
-         <p>В самое ближайшее время нам предстоит сделать мобильное приложение TapYou самым
-          умным и талантливым: оптимизация алгоритмов, пайплайнов и микросервисов,
-          синтезация речи, классификация текста, потоковая обработка видео и фото.</p>
-
-         <p>Мы ждем открытых, жадных до знаний и любящих писать (в идеале чистый) код и
-          рефакторить его. И, конечно, тех, кто не боится узнавать и применять новые и
-          актуальные инструменты в работе.</p>
-
-
-
+         <p>Подробнее о приложении можно прочитать по ссылке. В команде хотим видеть
+          самостоятельных и ответственных людей с критическим мышлением и творческим
+          подходом к делу. Активная позиция по вопросам процессов, улучшения практик
+          разработки и UX приветствуется.</p>
 
 
 
@@ -353,10 +401,22 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6182 13C20.0658 13 19.6181 13.4476 19.6181 13.9998C19.6181 14.552 20.0658 14.9997 20.6182 14.9997L24.0037 14.9997L24.0037 18.3841C24.0037 18.9362 24.4515 19.3839 25.0039 19.3839C25.5562 19.3839 26.004 18.9362 26.004 18.3841L26.004 13.9998C26.004 13.4476 25.5562 13 25.0039 13H20.6182ZM18.3858 26.0005C18.9382 26.0005 19.386 25.5529 19.386 25.0007C19.386 24.4485 18.9382 24.0008 18.3858 24.0008H15.0003L15.0003 20.6164C15.0003 20.0643 14.5525 19.6166 14.0002 19.6166C13.4478 19.6166 13 20.0643 13 20.6164V25.0007C13 25.5529 13.4478 26.0005 14.0002 26.0005H18.3858Z" fill="white" />
          </svg>
         </a>
+        <a href="#" class="card__close">
+         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="39" height="39" rx="19.5" fill="#282B2F" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7069 22.9083C16.3162 23.2989 15.6831 23.2989 15.2927 22.9083C14.9023 22.5178 14.9025 21.8846 15.2931 21.4941L17.6874 19.1006L15.2947 16.7071C14.9043 16.3166 14.9045 15.6834 15.2951 15.2929C15.6858 14.9024 16.3189 14.9024 16.7093 15.2929L19.0508 17.6351L21.3923 15.2929C21.7827 14.9024 22.4159 14.9024 22.8065 15.2929C23.1972 15.6834 23.1974 16.3166 22.807 16.7071L20.4143 19.1006L22.8085 21.4941C23.1992 21.8846 23.1994 22.5178 22.809 22.9083C22.4186 23.2989 21.7854 23.2989 21.3948 22.9083L19.0508 20.5651L16.7069 22.9083Z" fill="white" />
+         </svg>
+        </a>
+        <a href="#" class="card__ancor btn btn--pink">
+         Вакансии
+        </a>
+
        </div>
       </div>
 
-      <div class="team__item card">
+      <div class="team__item team__card card">
+
+
        <div class="card__body">
         <div class="card__photo">
          <img src="images/team/3.png" alt="" />
@@ -376,21 +436,19 @@
 
 
 
+         <p>Меня зовут Владислав, и я тимлид команды AI. Если computer vision, future
+          engineering, deepfake, recommendation system звучит для тебя, как песня, то
+          в
+          нашей компании тебе точно будет чем заняться.</p>
 
+         <p>В самое ближайшее время нам предстоит сделать мобильное приложение TapYou
+          самым
+          умным и талантливым: оптимизация алгоритмов, пайплайнов и микросервисов,
+          синтезация речи, классификация текста, потоковая обработка видео и фото.</p>
 
-
-
-
-         <p>Меня зовут Екатерина. В TapYou я тимлид отличной iOS-команды.</p>
-
-         <p>Наши задачи очень отличаются от типичных на рынке, и это проявляется во всем: от
-          бизнес-логики до дизайна. Работы сделано уже очень много, но самое интересное,
-          конечно, впереди.</p>
-
-         <p>Подробнее о приложении можно прочитать по ссылке. В команде хотим видеть
-          самостоятельных и ответственных людей с критическим мышлением и творческим
-          подходом к делу. Активная позиция по вопросам процессов, улучшения практик
-          разработки и UX приветствуется.</p>
+         <p>Мы ждем открытых, жадных до знаний и любящих писать (в идеале чистый) код и
+          рефакторить его. И, конечно, тех, кто не боится узнавать и применять новые и
+          актуальные инструменты в работе.</p>
 
 
 
@@ -401,10 +459,22 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6182 13C20.0658 13 19.6181 13.4476 19.6181 13.9998C19.6181 14.552 20.0658 14.9997 20.6182 14.9997L24.0037 14.9997L24.0037 18.3841C24.0037 18.9362 24.4515 19.3839 25.0039 19.3839C25.5562 19.3839 26.004 18.9362 26.004 18.3841L26.004 13.9998C26.004 13.4476 25.5562 13 25.0039 13H20.6182ZM18.3858 26.0005C18.9382 26.0005 19.386 25.5529 19.386 25.0007C19.386 24.4485 18.9382 24.0008 18.3858 24.0008H15.0003L15.0003 20.6164C15.0003 20.0643 14.5525 19.6166 14.0002 19.6166C13.4478 19.6166 13 20.0643 13 20.6164V25.0007C13 25.5529 13.4478 26.0005 14.0002 26.0005H18.3858Z" fill="white" />
          </svg>
         </a>
+        <a href="#" class="card__close">
+         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="39" height="39" rx="19.5" fill="#282B2F" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7069 22.9083C16.3162 23.2989 15.6831 23.2989 15.2927 22.9083C14.9023 22.5178 14.9025 21.8846 15.2931 21.4941L17.6874 19.1006L15.2947 16.7071C14.9043 16.3166 14.9045 15.6834 15.2951 15.2929C15.6858 14.9024 16.3189 14.9024 16.7093 15.2929L19.0508 17.6351L21.3923 15.2929C21.7827 14.9024 22.4159 14.9024 22.8065 15.2929C23.1972 15.6834 23.1974 16.3166 22.807 16.7071L20.4143 19.1006L22.8085 21.4941C23.1992 21.8846 23.1994 22.5178 22.809 22.9083C22.4186 23.2989 21.7854 23.2989 21.3948 22.9083L19.0508 20.5651L16.7069 22.9083Z" fill="white" />
+         </svg>
+        </a>
+        <a href="#" class="card__ancor btn btn--pink">
+         Вакансии
+        </a>
+
        </div>
       </div>
 
      </div>
+
+     <a href="#" class="team__vacancy-btn btn">Вакансии</a>
     </div>
    </div>
   </div>
@@ -440,7 +510,7 @@
 
 
 
-         Узнавать <br> новое
+         Узнавать новое
 
 
         </div>
@@ -553,9 +623,9 @@
 
      <ol class="vacancy__card-list card-list">
 
-      <li class="card card--with-tail">
+      <li class="card card--second card--with-tail">
        <div class="card-list__item card__body">
-        <div class="card__title card__title--no-outline">
+        <div class="card__title">
          Lead QA Engineer
         </div>
         <div class="card__content">
@@ -563,7 +633,7 @@
 
          </p>
 
-         <a href="#" class="card__more">
+         <a href="#" class="card__ancor">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -575,9 +645,9 @@
        </div>
       </li>
 
-      <li class="card card--with-tail">
+      <li class="card card--second card--with-tail">
        <div class="card-list__item card__body">
-        <div class="card__title card__title--no-outline">
+        <div class="card__title">
          Middle Android Developer
         </div>
         <div class="card__content">
@@ -585,7 +655,7 @@
 
          </p>
 
-         <a href="#" class="card__more">
+         <a href="#" class="card__ancor">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -597,9 +667,9 @@
        </div>
       </li>
 
-      <li class="card card--with-tail">
+      <li class="card card--second card--with-tail">
        <div class="card-list__item card__body">
-        <div class="card__title card__title--no-outline">
+        <div class="card__title">
          Python developer в отдел ML/DL
         </div>
         <div class="card__content">
@@ -607,7 +677,7 @@
 
          </p>
 
-         <a href="#" class="card__more">
+         <a href="#" class="card__ancor">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -619,9 +689,9 @@
        </div>
       </li>
 
-      <li class="card card--with-tail">
+      <li class="card card--second card--with-tail">
        <div class="card-list__item card__body">
-        <div class="card__title card__title--no-outline">
+        <div class="card__title">
          Senior UX-UI designer
         </div>
         <div class="card__content">
@@ -629,7 +699,7 @@
 
          </p>
 
-         <a href="#" class="card__more">
+         <a href="#" class="card__ancor">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -641,9 +711,9 @@
        </div>
       </li>
 
-      <li class="card card--with-tail">
+      <li class="card card--second card--with-tail">
        <div class="card-list__item card__body">
-        <div class="card__title card__title--no-outline">
+        <div class="card__title">
          Senior Android Developer
         </div>
         <div class="card__content">
@@ -651,7 +721,7 @@
 
          </p>
 
-         <a href="#" class="card__more">
+         <a href="#" class="card__ancor">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -663,9 +733,9 @@
        </div>
       </li>
 
-      <li class="card card--with-tail">
+      <li class="card card--second card--with-tail">
        <div class="card-list__item card__body">
-        <div class="card__title card__title--no-outline">
+        <div class="card__title">
          Backend Developer
         </div>
         <div class="card__content">
@@ -673,7 +743,7 @@
 
          </p>
 
-         <a href="#" class="card__more">
+         <a href="#" class="card__ancor">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -685,9 +755,9 @@
        </div>
       </li>
 
-      <li class="card card--with-tail">
+      <li class="card card--second card--with-tail">
        <div class="card-list__item card__body">
-        <div class="card__title card__title--no-outline">
+        <div class="card__title">
          Senior QA Engineer
         </div>
         <div class="card__content">
@@ -695,7 +765,7 @@
 
          </p>
 
-         <a href="#" class="card__more">
+         <a href="#" class="card__ancor">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -816,8 +886,6 @@
 
 
 
-
-
      <ul class="ul">
 
       <li>Аккредитованная в России IT-компания;</li>
@@ -833,9 +901,6 @@
      </ul>
 
 
-
-
-
     </div>
    </div>
   </div>
@@ -843,38 +908,36 @@
 
   <div class="resume section">
    <div class="container">
-    <div class="resume__wrap">
+    <form action="#" class="resume__form js--resume__form">
      <div class="resume__title">
       <h3 class="h3">Нет подходящей вакансии? </h3>
       <p>Оставь резюме и мы свяжемся, когда появится предложение именно для тебя!</p>
      </div>
-
-
      <div class="resume__fields">
       <input type="text" placeholder="Имя" class="input" />
       <input type="text" placeholder="E-mail" class="input" />
-      <a href="#" class="resume__fields-btn btn">
-       Прикрепить резюме
+
+      <label class="resume__file file">
+       <input type="file" class="file__input">
+       <div class="resume__fields-btn file__label btn">
+        <span>Прикрепить резюме</span>
+       </div>
+      </label>
+
       </a>
      </div>
-
-
      <div class="resume__assent">
       <label class="custom-checkbox">
        <input type="checkbox" value="value-1">
        <span>Даю согласие на обработку персональных данных</span>
       </label>
      </div>
-
-
      <div class="resume__submit">
-      <button class="btn btn--pink">
+      <button class="resume__submit-btn btn btn--pink btn--disabled">
        Отправить
       </button>
      </div>
-
-
-    </div>
+    </form>
    </div>
   </div>
 
@@ -929,9 +992,4 @@
  <div id="preloader">
   <div class="preloader"></div>
  </div>
-
-
-
-
-
 </body>
