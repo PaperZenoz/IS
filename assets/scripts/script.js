@@ -22,10 +22,25 @@ $(document).ready(function () {
     $('.js--more-link').on('click', function (e) {
         e.preventDefault()
 
-        var $attr = $(this).data('more'),
+        var $link = $(this),
+            $attr = $link.data('more'),
             $content = $('.js--more-content[data-more=' + $attr + ']')
-        $content.slideToggle()
 
+
+        function linkReveision() {
+            $link.toggleClass('open')
+
+            if ($link.hasClass('open')) {
+                $link.text('Свернуть')
+            } else {
+                $link.text('Узнать больше')
+            }
+
+        }
+
+
+        linkReveision()
+        $content.slideToggle()
     })
 
 
@@ -35,12 +50,10 @@ $(document).ready(function () {
         $('.burger').on('click', function () {
             $nav.addClass('open')
         })
-
         $('.nav__close-btn').on('click', function () {
             $nav.removeClass('open')
         })
     }
-
 
     function teamCards() {
         var $cards = $('.team__card')
@@ -146,10 +159,39 @@ $(document).ready(function () {
 
     }
 
+    function upBtn() {
+        $(window).scroll(function () {
+            var top = $(window).scrollTop();
+            if (top >= 20) {
+                $('.up-btn').fadeIn()
+            } else {
+                $('.up-btn').fadeOut()
+            }
+        });
+
+    }
+
+    function cardsTail() {
+
+        var $cardList = $('.js--card-tails'),
+            $cards = $cardList.find('.card'),
+            $length = $cards.length,
+            $remains = $length % 3
+
+        $cards.addClass('card--with-tail')
+        if ($remains == 0) {
+            $cards.slice(-3).removeClass('card--with-tail')
+        } else {
+            $cards.slice(-$remains).removeClass('card--with-tail')
+        }
+    }
+
 
     nav()
     teamCards()
     resumeForm()
+    upBtn()
+    cardsTail()
 
 
 })

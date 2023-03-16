@@ -5,28 +5,12 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
  <title>Главная</title>
-
  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
-
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="assets/css/style.css">
 
-
-
-
-
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-
-
-
-
-
  <script type="module" src="assets/scripts/script.js"></script>
 </head>
 
@@ -67,10 +51,10 @@
       </svg>
 
      </a>
-     <a href="#" class="nav__link link">Компания</a>
-     <a href="#" class="nav__link link">Продукт</a>
-     <a href="#" class="nav__link link">Команда</a>
-     <a href="#" class="nav__link link">Вакансии</a>
+     <a href="#company" class="nav__link link">Компания</a>
+     <a href="#project" class="nav__link link">Продукт</a>
+     <a href="#team" class="nav__link link">Команда</a>
+     <a href="#vacancy" class="nav__link link">Вакансии</a>
     </nav>
     <div class="burger active">
      <span></span>
@@ -92,7 +76,7 @@
 
 
 
-  <div class="banner section">
+  <div id="banner" class="banner section">
    <div class="container">
     <div class="banner__wrap">
      <div class="banner__bg"></div>
@@ -107,7 +91,7 @@
        Разрабатываем уникальные
        продукты
       </div>
-      <a href="#" class="btn">
+      <a href="#project" class="btn">
        О TAPYOU
       </a>
 
@@ -118,7 +102,7 @@
   </div>
 
 
-  <div class="company section">
+  <div id="company" class="company section">
    <div class="container">
     <div class="company__wrap">
      <h1 class="h1">О компании</h1>
@@ -147,7 +131,7 @@
   </div>
 
 
-  <div class="project section">
+  <div id="project" class="project section">
    <div class="container">
     <div class="project__wrap">
      <div class="project__top">
@@ -286,7 +270,7 @@
   </div>
 
 
-  <div class="team section">
+  <div id="team" class="team section">
    <div class="container">
     <div class="team__wrap">
      <h2 class="h2">Команда</h2>
@@ -589,7 +573,7 @@
 
         <div class="card__content">
          <p>
-          Мир меняется стремительно, и мы стареемся за ним успеть
+          Мир меняется стремительно, и мы стараемся за ним успеть
          </p>
 
         </div>
@@ -605,7 +589,7 @@
   </div>
 
 
-  <div class="vacancy section">
+  <div id="vacancy" class="vacancy section">
    <div class="container">
     <div class="vacancy__wrap">
      <h1 class="h1">
@@ -621,9 +605,10 @@
      </p>
 
 
-     <ol class="vacancy__card-list card-list">
 
-      <li class="card card--second card--with-tail">
+     <ol class="vacancy__card-list card-list js--card-tails">
+
+      <li class="card card--second">
        <div class="card-list__item card__body">
         <div class="card__title">
          Lead QA Engineer
@@ -633,7 +618,7 @@
 
          </p>
 
-         <a href="#" class="card__ancor">
+         <a href="#" class="card__ancor ">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -645,7 +630,7 @@
        </div>
       </li>
 
-      <li class="card card--second card--with-tail">
+      <li class="card card--second">
        <div class="card-list__item card__body">
         <div class="card__title">
          Middle Android Developer
@@ -655,7 +640,7 @@
 
          </p>
 
-         <a href="#" class="card__ancor">
+         <a href="#" class="card__ancor ">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -667,7 +652,7 @@
        </div>
       </li>
 
-      <li class="card card--second card--with-tail">
+      <li class="card card--second">
        <div class="card-list__item card__body">
         <div class="card__title">
          Python developer в отдел ML/DL
@@ -677,7 +662,7 @@
 
          </p>
 
-         <a href="#" class="card__ancor">
+         <a href="#" class="card__ancor ">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -689,7 +674,7 @@
        </div>
       </li>
 
-      <li class="card card--second card--with-tail">
+      <li class="card card--second">
        <div class="card-list__item card__body">
         <div class="card__title">
          Senior UX-UI designer
@@ -699,7 +684,7 @@
 
          </p>
 
-         <a href="#" class="card__ancor">
+         <a href="#" class="card__ancor ">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -711,7 +696,7 @@
        </div>
       </li>
 
-      <li class="card card--second card--with-tail">
+      <li class="card card--second">
        <div class="card-list__item card__body">
         <div class="card__title">
          Senior Android Developer
@@ -721,7 +706,7 @@
 
          </p>
 
-         <a href="#" class="card__ancor">
+         <a href="#" class="card__ancor ">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -733,7 +718,7 @@
        </div>
       </li>
 
-      <li class="card card--second card--with-tail">
+      <li class="card card--second">
        <div class="card-list__item card__body">
         <div class="card__title">
          Backend Developer
@@ -743,7 +728,7 @@
 
          </p>
 
-         <a href="#" class="card__ancor">
+         <a href="#" class="card__ancor ">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -755,7 +740,7 @@
        </div>
       </li>
 
-      <li class="card card--second card--with-tail">
+      <li class="card card--second">
        <div class="card-list__item card__body">
         <div class="card__title">
          Senior QA Engineer
@@ -765,7 +750,7 @@
 
          </p>
 
-         <a href="#" class="card__ancor">
+         <a href="#" class="card__ancor ">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
            <rect width="39" height="39" rx="19.5" fill="#E4668C" />
            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2927 15.2929C18.6831 14.9024 19.3162 14.9024 19.7069 15.2929L22.8085 18.3935C23.1991 18.784 23.1994 19.4172 22.809 19.8077L19.7093 22.9083C19.319 23.2989 18.6858 23.2989 18.2951 22.9083C17.9045 22.5178 17.9043 21.8846 18.2947 21.4941L20.6874 19.1006L18.2931 16.7071C17.9025 16.3166 17.9023 15.6834 18.2927 15.2929Z" fill="white" />
@@ -786,6 +771,15 @@
   <div class="vacancy-info section">
    <div class="container">
     <div class="vacancy-info__wrap">
+     <a href="#" class="vacancy-info__back">
+      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <rect width="56" height="56" rx="28" fill="#282B2F" />
+       <path fill-rule="evenodd" clip-rule="evenodd" d="M30.4755 21.9596C29.9149 21.3989 29.0057 21.3989 28.4448 21.9596L23.9912 26.4118C23.4303 26.9725 23.43 27.8817 23.9905 28.4425L28.4413 32.8946C29.0018 33.4554 29.911 33.4554 30.4719 32.8946C31.0329 32.3339 31.0332 31.4247 30.4726 30.8639L27.0369 27.4271L30.4748 23.9903C31.0358 23.4295 31.036 22.5204 30.4755 21.9596Z" fill="white" />
+      </svg>
+     </a>
+
+
+
      <h1 class="h1">
       Вакансия
      </h1>
@@ -796,7 +790,7 @@
       Наш стек: <span>Kotlin only, RxJava, Dagger, Room, Retrofit, Centrifuge.</span>
      </p>
      <p>
-      Технологии в первую очередь связаны с видеозаписью, звонками, анимациями: <span>ffmpeg, MediaCodec,
+      Технологии в ,первую очередь, связаны с видеозаписью, звонками, анимациями: <span>ffmpeg, MediaCodec,
        MediaMuxer, Lottie, WebRTC.</span>
      </p>
 
@@ -948,16 +942,13 @@
 
      <a href="#" class="footer__logo logo"></a>
      <div class="footer__nav">
+      <a href="#company" class="link">Компания</a>
 
+      <a href="#project" class="link">Продукт</a>
 
-      <a href="#" class="link">Компания</a>
+      <a href="#team" class="link">Команда</a>
 
-      <a href="#" class="link">Продукт</a>
-
-      <a href="#" class="link">Команда</a>
-
-      <a href="#" class="link">Вакансии</a>
-
+      <a href="#vacancy" class="link">Вакансии</a>
      </div>
      <div class="footer__contacts">
       <a href="#" class="footer__telephone link">
@@ -977,7 +968,7 @@
 
 
 
-  <a href="#" class="up-btn">
+  <a href="#" class="up-btn" style="display: none">
    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="56" width="56" height="56" rx="28" transform="rotate(90 56 0)" fill="#282B2F" />
     <path fill-rule="evenodd" clip-rule="evenodd" d="M33.4701 25.685C34.0308 26.246 34.0308 27.1551 33.4701 27.7157C32.9093 28.2763 32.0001 28.276 31.4394 27.7151L29.4375 25.7125L29.4375 33.7528C29.4375 34.5458 28.7946 35.1887 28.0016 35.1887C27.2086 35.1887 26.5657 34.5458 26.5657 33.7528L26.5657 25.7135L24.5657 27.7128C24.005 28.2734 23.0958 28.2731 22.5351 27.7122C21.9743 27.1512 21.9743 26.2421 22.5351 25.6815L26.9872 21.2308C27.548 20.6702 28.4571 20.6705 29.0179 21.2314L33.4701 25.685Z" fill="white" />
