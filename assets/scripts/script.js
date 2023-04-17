@@ -59,9 +59,9 @@ $(document).ready(function () {
             $link.toggleClass('open')
 
             if ($link.hasClass('open')) {
-                $link.text('Свернуть')
+                $link.text('Hide')
             } else {
-                $link.text('Узнать больше')
+                $link.text('See More')
             }
 
         }
