@@ -29,7 +29,10 @@ $(document).ready(function () {
 
         $(window).resize(function () {
             if ($(window).width() < 1366) {
-                start()
+                if (! $slider.hasClass('slick-initialized')) {
+                    start()
+
+                }
             } else {
                 stop()
             }
@@ -39,7 +42,6 @@ $(document).ready(function () {
         if ($(window).width() < 1366) {
             start()
         }
-
 
 
     }
